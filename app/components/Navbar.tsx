@@ -8,6 +8,10 @@ const Navbar = () => {
                 <Link href="/">
                     <Image src="/logo.png" alt="logo" width={144} height={30} />
                 </Link>
+
+                <div className="flex items-center gap-5">
+
+                </div>
             </nav>
         </header>
     )
