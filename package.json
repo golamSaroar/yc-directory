@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.1",
+    "@radix-ui/react-toast": "^1.2.4",
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.69.0",
     "@sentry/nextjs": "^8.34.0",
