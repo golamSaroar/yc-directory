@@ -168,8 +168,9 @@ const StartupForm = () => {
       <Button 
         type="submit"
         className="startup-form_btn text-white"
+        disabled={isPending}
       >
-        Submit Your Pitch
+        {isPending ? "Submitting..." : "Submit Your Pitch"}
         <Send className="size-6 ml-2" />
       </Button>
     </form>
