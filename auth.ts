@@ -13,6 +13,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       profile: { id, login, bio },
     }) {
       const existingUser = await client
+        .withConfig({useCdn: false})
         .fetch(AUTHOR_BY_GITHUB_ID_QUERY, {id});
 
       if (!existingUser) {
@@ -32,6 +33,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     async jwt({ token, account, profile }) {
       if (account && profile) {
         const user = await client
+          .withConfig({useCdn: false})
           .fetch(AUTHOR_BY_GITHUB_ID_QUERY, {id: profile?.id});
 
         token.id = user?._id;
